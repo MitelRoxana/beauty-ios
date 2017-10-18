@@ -14,6 +14,7 @@
 		A01D51A41F974B000025D619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01D51A31F974B000025D619 /* Assets.xcassets */; };
 		A01D51A71F974B000025D619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01D51A51F974B000025D619 /* LaunchScreen.storyboard */; };
 		A01D51B01F97712C0025D619 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01D51AF1F97712C0025D619 /* FirebaseManager.swift */; };
+		A01D51B91F979A920025D619 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A01D51B81F979A910025D619 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +28,8 @@
 		A01D51A31F974B000025D619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A01D51A61F974B000025D619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A01D51A81F974B000025D619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A01D51AE1F976E030025D619 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A01D51AF1F97712C0025D619 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		A01D51B81F979A910025D619 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +64,7 @@
 		A01D51901F974B000025D619 = {
 			isa = PBXGroup;
 			children = (
-				A01D51AE1F976E030025D619 /* GoogleService-Info.plist */,
+				A01D51B81F979A910025D619 /* GoogleService-Info.plist */,
 				A01D519B1F974B000025D619 /* Beauty */,
 				A01D519A1F974B000025D619 /* Products */,
 				8A182B08E2B82BCB04AAB8DB /* Pods */,
@@ -83,14 +84,54 @@
 			isa = PBXGroup;
 			children = (
 				A01D519C1F974B000025D619 /* AppDelegate.swift */,
-				A01D519E1F974B000025D619 /* ViewController.swift */,
-				A01D51A01F974B000025D619 /* Main.storyboard */,
-				A01D51A31F974B000025D619 /* Assets.xcassets */,
-				A01D51A51F974B000025D619 /* LaunchScreen.storyboard */,
+				A01D51B11F97760B0025D619 /* Utils */,
+				A01D51B31F9776250025D619 /* Custom Views */,
+				A01D51B41F9776370025D619 /* Models */,
+				A01D51B21F9776140025D619 /* View Controllers */,
 				A01D51A81F974B000025D619 /* Info.plist */,
-				A01D51AF1F97712C0025D619 /* FirebaseManager.swift */,
+				A01D51B51F9776720025D619 /* Resources */,
 			);
 			path = Beauty;
+			sourceTree = "<group>";
+		};
+		A01D51B11F97760B0025D619 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A01D51AF1F97712C0025D619 /* FirebaseManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A01D51B21F9776140025D619 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A01D519E1F974B000025D619 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A01D51B31F9776250025D619 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		A01D51B41F9776370025D619 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A01D51B51F9776720025D619 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A01D51A51F974B000025D619 /* LaunchScreen.storyboard */,
+				A01D51A01F974B000025D619 /* Main.storyboard */,
+				A01D51A31F974B000025D619 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A01D51B91F979A920025D619 /* GoogleService-Info.plist in Resources */,
 				A01D51A71F974B000025D619 /* LaunchScreen.storyboard in Resources */,
 				A01D51A41F974B000025D619 /* Assets.xcassets in Resources */,
 				A01D51A21F974B000025D619 /* Main.storyboard in Resources */,
@@ -204,11 +246,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Beauty/Pods-Beauty-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -306,6 +360,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -355,6 +410,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -368,7 +424,7 @@
 				DEVELOPMENT_TEAM = 64G8LFH7A9;
 				INFOPLIST_FILE = Beauty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.roxanamitel.ios.Beauty;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roxanamitel.Beauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -384,7 +440,7 @@
 				DEVELOPMENT_TEAM = 64G8LFH7A9;
 				INFOPLIST_FILE = Beauty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.roxanamitel.ios.Beauty;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roxanamitel.Beauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -6,5 +6,8 @@ target 'Beauty' do
   use_frameworks!
 
   # Pods for Beauty
-pod 'Firebase/Core'
+  pod 'Firebase/Core'
+  pod 'FontAwesome.swift', git: 'https://github.com/thii/FontAwesome.swift.git', :branch => 'swift-4.0'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
 end
