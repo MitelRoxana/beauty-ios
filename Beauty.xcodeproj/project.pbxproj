@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54F8387513517666BD156917 /* Pods_Beauty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F638FAF8430E7B2154E9876 /* Pods_Beauty.framework */; };
 		A01D519D1F974B000025D619 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01D519C1F974B000025D619 /* AppDelegate.swift */; };
 		A01D519F1F974B000025D619 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01D519E1F974B000025D619 /* ViewController.swift */; };
 		A01D51A21F974B000025D619 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01D51A01F974B000025D619 /* Main.storyboard */; };
 		A01D51A41F974B000025D619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01D51A31F974B000025D619 /* Assets.xcassets */; };
 		A01D51A71F974B000025D619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01D51A51F974B000025D619 /* LaunchScreen.storyboard */; };
+		A01D51B01F97712C0025D619 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01D51AF1F97712C0025D619 /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F638FAF8430E7B2154E9876 /* Pods_Beauty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beauty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A69689FDAEF0F0723529452 /* Pods-Beauty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beauty.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beauty/Pods-Beauty.release.xcconfig"; sourceTree = "<group>"; };
+		9DEE627F0C85743C2137FB0A /* Pods-Beauty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beauty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beauty/Pods-Beauty.debug.xcconfig"; sourceTree = "<group>"; };
 		A01D51991F974B000025D619 /* Beauty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beauty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01D519C1F974B000025D619 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A01D519E1F974B000025D619 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,8 @@
 		A01D51A31F974B000025D619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A01D51A61F974B000025D619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A01D51A81F974B000025D619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A01D51AE1F976E030025D619 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A01D51AF1F97712C0025D619 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +36,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54F8387513517666BD156917 /* Pods_Beauty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A182B08E2B82BCB04AAB8DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DEE627F0C85743C2137FB0A /* Pods-Beauty.debug.xcconfig */,
+				5A69689FDAEF0F0723529452 /* Pods-Beauty.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		979F08A1B9229701E8E5D327 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F638FAF8430E7B2154E9876 /* Pods_Beauty.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A01D51901F974B000025D619 = {
 			isa = PBXGroup;
 			children = (
+				A01D51AE1F976E030025D619 /* GoogleService-Info.plist */,
 				A01D519B1F974B000025D619 /* Beauty */,
 				A01D519A1F974B000025D619 /* Products */,
+				8A182B08E2B82BCB04AAB8DB /* Pods */,
+				979F08A1B9229701E8E5D327 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +88,7 @@
 				A01D51A31F974B000025D619 /* Assets.xcassets */,
 				A01D51A51F974B000025D619 /* LaunchScreen.storyboard */,
 				A01D51A81F974B000025D619 /* Info.plist */,
+				A01D51AF1F97712C0025D619 /* FirebaseManager.swift */,
 			);
 			path = Beauty;
 			sourceTree = "<group>";
@@ -71,9 +100,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A01D51AB1F974B000025D619 /* Build configuration list for PBXNativeTarget "Beauty" */;
 			buildPhases = (
+				8E4A500D2260465B4F1EB1A5 /* [CP] Check Pods Manifest.lock */,
 				A01D51951F974B000025D619 /* Sources */,
 				A01D51961F974B000025D619 /* Frameworks */,
 				A01D51971F974B000025D619 /* Resources */,
+				C830FF3CF4BB3640F31AB958 /* [CP] Embed Pods Frameworks */,
+				5711B33CE9E0C5D00C12BD26 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,11 +163,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5711B33CE9E0C5D00C12BD26 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beauty/Pods-Beauty-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E4A500D2260465B4F1EB1A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Beauty-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C830FF3CF4BB3640F31AB958 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Beauty/Pods-Beauty-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beauty/Pods-Beauty-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A01D51951F974B000025D619 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A01D51B01F97712C0025D619 /* FirebaseManager.swift in Sources */,
 				A01D519F1F974B000025D619 /* ViewController.swift in Sources */,
 				A01D519D1F974B000025D619 /* AppDelegate.swift in Sources */,
 			);
@@ -272,13 +361,14 @@
 		};
 		A01D51AC1F974B000025D619 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DEE627F0C85743C2137FB0A /* Pods-Beauty.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64G8LFH7A9;
 				INFOPLIST_FILE = Beauty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.beauty.ios.Beauty;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roxanamitel.ios.Beauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -287,13 +377,14 @@
 		};
 		A01D51AD1F974B000025D619 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A69689FDAEF0F0723529452 /* Pods-Beauty.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64G8LFH7A9;
 				INFOPLIST_FILE = Beauty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.beauty.ios.Beauty;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roxanamitel.ios.Beauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
