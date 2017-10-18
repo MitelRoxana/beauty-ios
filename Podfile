@@ -7,6 +7,7 @@ target 'Beauty' do
 
   # Pods for Beauty
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
   pod 'FontAwesome.swift', git: 'https://github.com/thii/FontAwesome.swift.git', :branch => 'swift-4.0'
   pod 'FacebookCore'
   pod 'FacebookLogin'

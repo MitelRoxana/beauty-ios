@@ -15,6 +15,8 @@
 		A01D51A71F974B000025D619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01D51A51F974B000025D619 /* LaunchScreen.storyboard */; };
 		A01D51B01F97712C0025D619 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01D51AF1F97712C0025D619 /* FirebaseManager.swift */; };
 		A01D51B91F979A920025D619 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A01D51B81F979A910025D619 /* GoogleService-Info.plist */; };
+		A0B4C9821F97A43D00825CCF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4C9811F97A43D00825CCF /* LoginViewModel.swift */; };
+		A0B4C9871F97A7AB00825CCF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4C9861F97A7AB00825CCF /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		A01D51A81F974B000025D619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A01D51AF1F97712C0025D619 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		A01D51B81F979A910025D619 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A0B4C9811F97A43D00825CCF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A0B4C9861F97A7AB00825CCF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +89,10 @@
 			children = (
 				A01D519C1F974B000025D619 /* AppDelegate.swift */,
 				A01D51B11F97760B0025D619 /* Utils */,
+				A0B4C9851F97A79A00825CCF /* Extensions */,
 				A01D51B31F9776250025D619 /* Custom Views */,
 				A01D51B41F9776370025D619 /* Models */,
+				A0B4C9801F97A42B00825CCF /* View Models */,
 				A01D51B21F9776140025D619 /* View Controllers */,
 				A01D51A81F974B000025D619 /* Info.plist */,
 				A01D51B51F9776720025D619 /* Resources */,
@@ -132,6 +138,22 @@
 				A01D51A31F974B000025D619 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A0B4C9801F97A42B00825CCF /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A0B4C9811F97A43D00825CCF /* LoginViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		A0B4C9851F97A79A00825CCF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A0B4C9861F97A7AB00825CCF /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +274,7 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -263,6 +286,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -278,6 +302,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0B4C9871F97A7AB00825CCF /* Extensions.swift in Sources */,
+				A0B4C9821F97A43D00825CCF /* LoginViewModel.swift in Sources */,
 				A01D51B01F97712C0025D619 /* FirebaseManager.swift in Sources */,
 				A01D519F1F974B000025D619 /* ViewController.swift in Sources */,
 				A01D519D1F974B000025D619 /* AppDelegate.swift in Sources */,

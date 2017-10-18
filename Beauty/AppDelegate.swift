@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
         return true
     }
     
@@ -29,5 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return handled
     }
+    
 }
 
