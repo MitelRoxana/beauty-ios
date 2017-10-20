@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addRerservationButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,10 @@ class HomeViewController: UIViewController {
             navigator.isNavigationBarHidden = false
             self.navigationItem.setHidesBackButton(true, animated: false)
         }
+    }
+    
+    @IBAction func addReservation(_ sender: Any) {
+        
     }
 }
 

@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -73,14 +74,14 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login with Facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hRK-K8-UUZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with Google" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hRK-K8-UUZ">
                                         <rect key="frame" x="30" y="10.5" width="255" height="19"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.86781007051467896" green="0.29367098212242126" blue="0.22452801465988159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="hRK-K8-UUZ" firstAttribute="centerY" secondItem="PPm-13-ifG" secondAttribute="centerY" id="Tgb-2S-xeR"/>
                                     <constraint firstAttribute="trailing" secondItem="hRK-K8-UUZ" secondAttribute="trailing" constant="10" id="deU-Bd-xse"/>
@@ -93,6 +94,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGe-I5-sDn">
                                 <rect key="frame" x="40" y="357" width="295" height="40"/>
                                 <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zCC-6A-Swl"/>
                                     <action selector="loginWithFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oX7-xH-f8v"/>
                                 </connections>
                             </button>
@@ -128,7 +130,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="iTU-em-9pZ"/>
                     <connections>
-                        <outlet property="facebookIcon" destination="eAt-lH-XZi" id="gUi-Bx-kJe"/>
+                        <outlet property="googleIcon" destination="eAt-lH-XZi" id="xJF-DS-nQD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -246,14 +248,62 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zHG-nL-o9n"/>
                     </view>
-                    <navigationItem key="navigationItem" id="us7-TU-ugg"/>
+                    <navigationItem key="navigationItem" id="us7-TU-ugg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eFA-kQ-NSD">
+                            <connections>
+                                <action selector="addReservation:" destination="f90-ak-RTM" id="hD9-0x-wfn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="addRerservationButton" destination="eFA-kQ-NSD" id="yMb-JQ-Pq2"/>
                         <outlet property="tableView" destination="vrz-cs-8UJ" id="Dcj-Cd-abA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zL-9W-L2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="496.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="bIT-vt-1FM">
+            <objects>
+                <viewController id="h4m-Gi-cR3" customClass="CalendarViewController" customModule="Beauty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sn8-1o-JCe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8u-3d-vtY">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dg2-Eo-gvf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="EGq-De-PUe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vH1-Hn-Q73" firstAttribute="bottom" secondItem="M8u-3d-vtY" secondAttribute="bottom" id="79N-d8-QrJ"/>
+                            <constraint firstItem="dg2-Eo-gvf" firstAttribute="top" secondItem="sn8-1o-JCe" secondAttribute="top" id="IBW-Id-ck0"/>
+                            <constraint firstItem="vH1-Hn-Q73" firstAttribute="trailing" secondItem="M8u-3d-vtY" secondAttribute="trailing" id="a4M-KP-hIe"/>
+                            <constraint firstItem="M8u-3d-vtY" firstAttribute="leading" secondItem="vH1-Hn-Q73" secondAttribute="leading" id="dEV-1I-93g"/>
+                            <constraint firstItem="vH1-Hn-Q73" firstAttribute="trailing" secondItem="dg2-Eo-gvf" secondAttribute="trailing" id="eDw-9X-wEP"/>
+                            <constraint firstItem="dg2-Eo-gvf" firstAttribute="leading" secondItem="vH1-Hn-Q73" secondAttribute="leading" id="fqQ-ND-SLx"/>
+                            <constraint firstItem="M8u-3d-vtY" firstAttribute="top" secondItem="dg2-Eo-gvf" secondAttribute="bottom" id="r7s-gQ-6Jy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vH1-Hn-Q73"/>
+                    </view>
+                    <connections>
+                        <outlet property="calendarView" destination="M8u-3d-vtY" id="nja-SI-2O4"/>
+                        <outlet property="calendarWeekBarView" destination="dg2-Eo-gvf" id="2Hf-6X-Hj8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y4Q-ZI-emY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1298.4000000000001" y="136.28185907046478"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8jj-Ma-2pw">
