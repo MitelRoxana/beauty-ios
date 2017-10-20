@@ -7,4 +7,7 @@ target 'Beauty' do
 
   # Pods for Beauty
   pod 'FontAwesome.swift', git: 'https://github.com/thii/FontAwesome.swift.git', :branch => 'swift-4.0'
+  pod 'GoogleAPIClientForREST/Calendar', '~> 1.2.1'
+  pod 'Google/SignIn', '~> 3.0.3'
+
 end
