@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import GoogleAPIClientForREST
+import GoogleSignIn
 import FontAwesome_swift
 
 class LoginViewController: UIViewController {
@@ -15,11 +17,13 @@ class LoginViewController: UIViewController {
     
     let viewModel = LoginViewModel()
     
+    let bool = true
     override func viewDidLoad() {
         super.viewDidLoad()
         
         googleIcon.font = UIFont.fontAwesome(ofSize: 20)
         googleIcon.text = String.fontAwesomeIcon(name: .google)
+        initialConfig()
         
         viewModel.onLoginFinished = { error  in
             if let error = error {
@@ -31,9 +35,34 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    private func initialConfig() {
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+    }
 
     @IBAction func login(_ sender: Any) {
-        
+        GIDSignIn.sharedInstance().signIn()
+    }
+}
+
+extension LoginViewController: GIDSignInDelegate, GIDSignInUIDelegate{
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
+              withError error: Error!) {
+        if let error = error {
+            self.presentAlertWithTitle(title: "Authentication Error", message: error.localizedDescription)
+            GoogleCalendarManager.sharedInstance.service.authorizer = nil
+        } else {
+            GoogleCalendarManager.sharedInstance.service.authorizer = user.authentication.fetcherAuthorizer()
+            presentHome()
+        }
+    }
+    
+    private func presentHome() {
+        if let homeViewController = UIStoryboard.main.instantiateViewController(withIdentifier: Identifiers.Main.homeNavigationViewController) as? UINavigationController {
+            self.present(homeViewController, animated: true, completion: nil)
+        }
     }
 }
 

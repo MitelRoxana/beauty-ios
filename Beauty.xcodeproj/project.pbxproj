@@ -21,6 +21,7 @@
 		A0B4C9911F98AEEF00825CCF /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4C9901F98AEEF00825CCF /* Datasource.swift */; };
 		A0CACE1E1F99F71000C3650E /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CACE1D1F99F71000C3650E /* CalendarViewController.swift */; };
 		A0CACE241F99F9F600C3650E /* Pods_Beauty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CACE251F99F9F600C3650E /* Pods_Beauty.framework */; };
+		A0E70F021F9DBC95009F1611 /* GoogleCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E70F011F9DBC95009F1611 /* GoogleCalendarManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		A0CACE201F99F9C900C3650E /* CalendarKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CalendarKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CACE251F99F9F600C3650E /* Pods_Beauty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Beauty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CACE261F99FA0900C3650E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A0E70F011F9DBC95009F1611 /* GoogleCalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCalendarManager.swift; sourceTree = "<group>"; };
+		A0E70F031F9DC3BB009F1611 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 		A01D51901F974B000025D619 = {
 			isa = PBXGroup;
 			children = (
+				A0E70F031F9DC3BB009F1611 /* GoogleService-Info.plist */,
 				A01D519B1F974B000025D619 /* Beauty */,
 				A01D519A1F974B000025D619 /* Products */,
 				8A182B08E2B82BCB04AAB8DB /* Pods */,
@@ -118,6 +122,7 @@
 			children = (
 				A0B4C9881F98A03A00825CCF /* Constants.swift */,
 				A0B4C9901F98AEEF00825CCF /* Datasource.swift */,
+				A0E70F011F9DBC95009F1611 /* GoogleCalendarManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				A0B4C98D1F98ADB800825CCF /* ServiceTableViewCell.swift in Sources */,
 				A0B4C9911F98AEEF00825CCF /* Datasource.swift in Sources */,
 				A0CACE1E1F99F71000C3650E /* CalendarViewController.swift in Sources */,
+				A0E70F021F9DBC95009F1611 /* GoogleCalendarManager.swift in Sources */,
 				A0B4C9821F97A43D00825CCF /* LoginViewModel.swift in Sources */,
 				A01D519F1F974B000025D619 /* LoginViewController.swift in Sources */,
 				A0B4C98F1F98AE6200825CCF /* Service.swift in Sources */,

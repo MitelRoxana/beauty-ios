@@ -89,3 +89,7 @@ extension UINavigationController {
 extension UIStoryboard {
       @nonobjc static let main = UIStoryboard(name: "Main", bundle: nil)
 }
+
+extension String {
+    
+}
